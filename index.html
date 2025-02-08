@@ -11,9 +11,10 @@
         <h2>Cipher Encryptor & Decryptor</h2>
 
         <label for="cipherType">Select Cipher:</label>
-        <select id="cipherType" onchange="toggleShiftInput()">
+        <select id="cipherType" onchange="toggleInputs()">
             <option value="caesar">Caesar Cipher</option>
             <option value="monoalphabetic">Monoalphabetic Cipher</option>
+            <option value="playfair">Playfair Cipher</option>
         </select>
 
         <textarea id="inputText" placeholder="Enter text..."></textarea>
@@ -27,6 +28,11 @@
             <label>Monoalphabetic Key:</label>
             <input type="text" id="monoKey" readonly>
             <button onclick="generateMonoKey()">Generate Key</button>
+        </div>
+
+        <div id="playfairKeyContainer" style="display: none;">
+            <label>Playfair Key:</label>
+            <input type="text" id="playfairKey" placeholder="Enter key phrase...">
         </div>
 
         <div class="buttons">
